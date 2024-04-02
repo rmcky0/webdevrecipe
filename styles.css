@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: "Red Hat Display", sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1)), url('img/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 16px;
+}
+
+nav {
+    width: 100%;
+    height: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #884A39;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 10px 14px;
+    box-shadow: 0px 5px 20px 1px rgb(84 47 9 / 34%);
+}
+
+header {
+	font-family: "Red Rose", serif;
+    padding: 0 45px;
+    position: relative;
+    color: #F9E0BB;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    font-weight: bold;
+}
+
+header span{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+header img {
+    width: 50px; 
+    margin-right: 10px;
+}
+
+.searchlogin {
+    width: 60%;
+    padding: 0px 15px;
+}
+
+.searchlogin ul{
+    justify-content: flex-end;
+    gap: 10%;
+    list-style: none;
+    display: flex; 
+}
+
+.searchlogin li{
+    list-style: none;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.searchbox{
+    border-bottom: 1px solid #F9E0BB;
+    cursor: pointer;
+}
+
+.searchbox input{
+    outline: none;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+}
+
+#searchicon{
+    color: #F9E0BB;
+    opacity: 0.5;
+}
+i.icon{
+    display: inline-flex;
+    align-items: center; 
+}
+
+.searchbox input::placeholder {
+    padding-left: 5px;
+    font-size: 17px;
+    font-weight: 500;
+	color: #F9E0BB;
+	opacity: 0.5;
+    font-style: italic;
+}
+
+.searchbox:focus{
+    border-bottom-color: black;
+}
+
+.searchbox:hover{
+    border-bottom-color: black;
+}
+
+.login {
+    width: auto;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #F9E0BB;
+    color: #884A39;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+li a{
+     text-decoration: none;
+}
+.login:hover {
+    background-color: #C38154;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+button span{
+    white-space: nowrap;
+    font-family: "Red Hat Display", sans-serif;
+    padding: 5px;
+}
+
+.gridcontainer {
+	max-width: 1300px;
+    padding: 50px 20px 0px 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+    margin: 70px 0px;
+}
+.categorycontainer {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px 0px 20px 20px;
+}
+
+.categorycontainer fieldset {
+    border: none;
+}
+
+.categorycontainer legend {
+    font-size: 1.1em;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px; 
+}
+
+.categorycontainer label {
+    display: inline-block;
+    padding: 10px;
+    width: calc(100% - 20px);
+    word-wrap: break-word; 
+}
+
+.categorycontainer input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+.categorycontainer input[type="checkbox"] + label {
+    padding: 5px;
+    font-size: 0.9em;
+    color: #333;
+    cursor: pointer;
+}
+.categorycontainer input[type="checkbox"] + label:hover {
+    padding: 5px;
+    font-size: 0.9em;
+    color: #F9E0BB;
+    cursor: pointer;
+}
+
+.categorycontainer input[type="checkbox"]:checked + label {
+    font-weight: bold;
+    color: #C38154;
+}
+
+main{
+    flex-grow: 1; 
+}
+
+h1{
+	font-size: 24px; 
+    padding: 0px 20px;
+}
+
+.main-recipe section {
+    padding: 20px;
+}
+
+.recipegrid{
+	display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+article{
+	position: relative;
+	max-width: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0px 50px /  50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article span{
+	margin: 10px;
+	padding: 5px;
+	display: block;
+}
+
+.description{
+	padding: 10px 5px 30px 5px;
+}
+
+article h3{
+	font-size: 20px;
+}
+
+article a{
+	position: absolute;
+	bottom: 10px; 
+	right: 10px; 
+	text-decoration: none;
+	color: black;
+}
+
+article a:hover p{ 
+	color: #F9E0BB;
+}
+
+article:hover h3, a:visited{
+	color: #884A39;
+    transition: color 0.3s ease;
+}
+
+article:hover{
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+	transform: scale(1.075); 
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+article:hover .image-container img{
+    transform: scale(1.1);
+    transition: transform 0.8s ease;
+}
+
+.image-container {
+    width: auto;
+    height: 300px;
+	border-radius: 0px 50px / 50px;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.rating {
+    display: inline-block;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    display: inline-block;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating input[type="radio"]:checked ~ label{
+    color: #ffc107;
+}
+.rating label:hover,
+.rating input[type="radio"]:hover ~ label {
+    color: #ffc107;
+}
+
+footer {
+    font-size: 14px;
+	color: #F9E0BB;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #884A39;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 5px 10px;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        font-size: calc(100% - 10%);
+    }
+    nav {
+        height: auto;
+    }
+
+    header {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+
+    .searchlogin {
+        width: 100%;
+        padding: 0px 10px;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+    }
+    .searchlogin ul{
+        width: 100;
+        gap: 1px;
+    }
+
+    .searchbox {
+        overflow: hidden;
+        transition: width 0.3s ease;
+        position: relative;
+    }
+    .searchbox input[type="text"] {
+        width: 100%; 
+        padding: 0px; 
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+        outline: none;
+    }
+    .searchbox input::placeholder {
+        font-size: calc(100% - 10%);
+    }
+
+
+    .searchlogin li {
+        margin: 0 15px;
+    }
+
+    .login {
+        font-size: calc(100% - 10%);
+        width: auto;
+        padding: 5px;
+        align-items: center;
+    }
+
+    button span{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: 0px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .material-symbols-outlined {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .searchlogin:hover .search-input {
+        width: 150px;
+    }
+
+    .gridcontainer {
+        grid-template-columns: 1fr; 
+        padding: 20px 10px; 
+    }
+
+    .categorycontainer {
+        margin: 20px 10px; 
+        padding: 10px; /
+    }
+
+    .recipegrid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+
+    article {
+        max-width: calc(100% - 20px);
+    }
+
+    .description {
+        padding: 0 0 20px 0; 
+    }
+
+    footer {
+        font-size: 12px; 
+        padding: 5px;
+    }
+}
